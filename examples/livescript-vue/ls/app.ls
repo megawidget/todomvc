@@ -15,7 +15,7 @@ window.app = new Vue do
       deep: true
       handler: todoStorage.save
   computed:
-    filteredTodos: -> filters[@visibility](@todos)
+    filteredTodos: -> filters[@visibility] @todos
     remaining: -> filters.active(@todos).length
     allDone:
       get: -> @remaining == 0
@@ -23,9 +23,8 @@ window.app = new Vue do
   methods:
     pluralize: (word, count) -> word + (count == 1 ? '' : 's')
     addTodo: ->
-      value = @newTodo && @newTodo.trim!
-      unless value
-        return
+      value = @newTodo?.trim!
+      return unless value
       @todos.push id: @todos.length + 1, title: value, completed: false
       @newTodo = ''
     removeTodo: (todo) -> @todos.splice @todos.indexOf(todo), 1
@@ -33,15 +32,13 @@ window.app = new Vue do
       @beforeEditCache = todo.title
       @editedTodo = todo
     doneEdit: (todo) ->
-      unless @editedTodo
-        return
+      return unless @editedTodo
       @editedTodo = null
-      todo.title = todo.title.trim!
-      unless todo.title
-        @removeTodo todo
+      todo.title.=trim!
+      @removeTodo todo unless todo.title
     cancelEdit: (todo) ->
       @editedTodo = null
       todo.title = @beforeEditCache
-    removeCompleted: -> @todos = filters.active(@todos)
+    removeCompleted: -> @todos = filters.active @todos
   directives:
     'todo-focus': (el, binding) -> el.focus! if binding.value
