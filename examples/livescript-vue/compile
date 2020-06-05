@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+mkdir -p js
 lsc -o js ls/*.ls
