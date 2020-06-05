@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+lsc -o js ls/*.ls
