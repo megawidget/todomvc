@@ -21,7 +21,7 @@ window.app = new Vue do
       get: -> @remaining == 0
       set: (value) -> @todos.forEach (todo) -> todo.completed = value
   methods:
-    pluralize: (word, count) -> word + (count == 1 ? '' : 's')
+    pluralize: (word, count) -> word + if count == 1 then '' else 's'
     addTodo: ->
       value = @newTodo?.trim!
       return unless value
