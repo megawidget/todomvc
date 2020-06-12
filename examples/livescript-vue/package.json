@@ -2,8 +2,12 @@
   "private": true,
   "dependencies": {
     "director": "^1.2.0",
-    "vue": "^2.1.8",
+    "gulp": "^4.0.2",
+    "gulp-livescript": "^3.0.1",
+    "gulp-pug": "^4.0.1",
+    "livescript": "^1.6.0",
+    "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.1",
-    "todomvc-app-css": "^2.0.0"
+    "vue": "^2.1.8"
   }
 }

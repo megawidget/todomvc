@@ -1,6 +1,9 @@
-# LiveScript + Vue.js TodoMVC Example
+# LiveScript + Pug + Vue.js TodoMVC Example
+
+`./build.ls` first.
+
 
 ## Credit
 
-This TodoMVC application was created by [Evan You](http://evanyou.me).
-Adapted for LiveScript by Igor Kaplounenko
+The original TodoMVC application was created by [Evan You](http://evanyou.me).
+Adapted for LiveScript and Pug by Igor Kaplounenko.
