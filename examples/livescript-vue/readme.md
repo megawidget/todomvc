@@ -1,6 +1,6 @@
 # LiveScript + Pug + Vue.js TodoMVC Example
 
-`./build.ls` first.
+`npm install && ./build.ls`
 
 
 ## Credit
